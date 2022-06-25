@@ -20,7 +20,7 @@ namespace GigHubExercise.Controllers
         }
 
         // GET: Gigs
-        [Authorize]
+        [Authorize]       
         public ActionResult Create()
         {
             var viewModel = new GigFormViewModel()
@@ -32,6 +32,7 @@ namespace GigHubExercise.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel viewModel)
         {
             if (!ModelState.IsValid)
