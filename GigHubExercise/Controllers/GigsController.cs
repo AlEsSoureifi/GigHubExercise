@@ -40,7 +40,7 @@ namespace GigHubExercise.Controllers
             {
                 ArtistId = User.Identity.GetUserId(),
                 GenreId = viewModel.Genre,
-                DateTime = DateTime.Parse(string.Format($"{viewModel.Date} {viewModel.Time}")),
+                DateTime = viewModel.DateTime,
                 Venue = viewModel.Venue
             };
 
